@@ -224,10 +224,6 @@ document.querySelector("#new_game").addEventListener("click", () => {
 })
 document.querySelector("#dificultate_plus").addEventListener("click", () => {
     if (dificultate <= size / 2) dificultate += 1;
-    else {
-        document.querySelector("#dificultate_plus").style.background = "white";
-        document.querySelector("#dificultate_plus").style.color = "coral";
-    }
     game();
     array();
     right_click();
@@ -235,15 +231,9 @@ document.querySelector("#dificultate_plus").addEventListener("click", () => {
     timer = 0;
     win.style.display = "none";
     lose.style.display = "none";
-    document.querySelector("#dificultate_minus").style.background = "coral";
-    document.querySelector("#dificultate_minus").style.color = "white";
 })
 document.querySelector("#dificultate_minus").addEventListener("click", () => {
     if (dificultate >= 2) dificultate -= 1;
-    else {
-        document.querySelector("#dificultate_minus").style.background = "white";
-        document.querySelector("#dificultate_minus").style.color = "coral";
-    }
     game();
     array();
     right_click();
@@ -251,8 +241,6 @@ document.querySelector("#dificultate_minus").addEventListener("click", () => {
     timer = 0;
     win.style.display = "none";
     lose.style.display = "none";
-    document.querySelector("#dificultate_plus").style.background = "coral";
-    document.querySelector("#dificultate_plus").style.color = "white";
 })
 document.querySelector("#size").addEventListener("click", () => {
     if (size < 20) size += 5;
