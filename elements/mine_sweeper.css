@@ -1,0 +1,125 @@
+#game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease-in-out;
+    margin-top: 35px;
+}
+
+body {
+    background: linear-gradient(rgb(225, 225, 225, 0.3), rgb(225, 225, 225, 0.3)), url("background.jpg");
+    background-size: cover;
+}
+
+.content_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    margin-bottom: 0;
+}
+
+.content_row button {
+    width: 10%;
+    background-color: coral;
+    color: white;
+    height: 40px;
+    font-size: 10px;
+    margin: 4px;
+    border: 0;
+    font-family: 'Courier New', Courier, ;
+}
+
+.content_row button:hover {
+    background-color: white;
+    color: tomato;
+    cursor: pointer;
+    border: 1px solid tomato;
+}
+
+.cell,
+.noBomb_cell {
+    border: 0.5px solid rgb(179, 89, 57);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: transparent;
+    background-color: coral;
+    user-select: none;
+    transition: all 0.5s ease-in-out;
+    width: 20px;
+}
+
+.cell:hover {
+    background-color: rgb(255, 174, 145);
+    cursor: pointer;
+    transition: none;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 20px;
+    justify-content: center;
+}
+
+#win_alert {
+    width: 30%;
+    font-size: 200%;
+    padding: 10px;
+    color: lightgreen;
+    text-align: center;
+    font-family: Candara;
+    background-color: rgb(78, 78, 78, 0.8);
+    position: absolute;
+    display: none;
+    font-weight: bolder;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    animation: anime 0.5s ease-in-out;
+}
+
+#win_alert i {
+    margin-left: 8px;
+}
+
+#lose_alert {
+    width: 30%;
+    font-size: 200%;
+    padding: 10px;
+    color: rgb(252, 39, 39);
+    text-align: center;
+    font-family: Candara;
+    background-color: rgb(248, 248, 248, 0.8);
+    position: absolute;
+    border-radius: 10px;
+    display: none;
+    font-weight: bolder;
+    transition: all 1s ease-in-out;
+    animation: anime 0.5s ease-in-out;
+}
+
+#lose_alert i {
+    margin-left: 8px;
+}
+
+#timer {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    font-family: Arial;
+    color: coral;
+}
+
+@keyframes anime {
+    0% {
+        width: 50px;
+        height: 10px;
+        opacity: 0;
+    }
+}
